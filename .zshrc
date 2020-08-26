@@ -8,7 +8,7 @@ export ZSH="/home/$USER/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -72,6 +72,9 @@ COMPLETION_WAITING_DOTS="true"
 # Dowload zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+# Download powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
 plugins=(git zsh-autosuggestions ripgrep z)
 
 source $ZSH/oh-my-zsh.sh
@@ -107,3 +110,5 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --no-ignore'
 export FZF_DEFAULT_OPTS='--height 96% --preview "bat {}"'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
