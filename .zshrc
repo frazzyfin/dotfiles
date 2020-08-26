@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/fraser/.oh-my-zsh"
+export ZSH="/home/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -68,6 +68,10 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+# Dowload zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 plugins=(git zsh-autosuggestions ripgrep z)
 
 source $ZSH/oh-my-zsh.sh
@@ -97,15 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias sudo="/bin/sudo"
-
-# load the developer toolset
-source /opt/rh/devtoolset-9/enable
 
 # load the fzf config
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --no-ignore'
 export FZF_DEFAULT_OPTS='--height 96% --preview "bat {}"'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#load starship prompt
-eval "$(starship init zsh)"
