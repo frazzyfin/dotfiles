@@ -104,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias fd=fdfind
 
 # load the fzf config
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --no-ignore'
