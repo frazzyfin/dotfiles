@@ -1,4 +1,4 @@
-# If you come from bash you might have to change your $PATH.
+
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -47,11 +47,11 @@ unsetopt correct_all
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias fd=fdfind
+source $HOME/.aliases
 
 # load the fzf config
 #export FZF_DEFAULT_COMMAND='fd --type f --hidden --no-ignore'
-export FZF_DEFAULT_OPTS='--height 96% --preview "bat {}"'
+export FZF_DEFAULT_OPTS='--height 96% --preview "bat -f --style header,numbers {}"'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
