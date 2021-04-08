@@ -9,6 +9,7 @@ syntax on
 
 let mapleader = " "
 
+set number
 set relativenumber
 set nohlsearch
 set hidden
