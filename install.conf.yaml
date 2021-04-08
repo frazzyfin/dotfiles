@@ -15,7 +15,7 @@
     ~/.ssh/authorized_keys: ssh/authorized_keys
     ~/.p10k.zsh: p10k.zsh
     ~/.aliases: aliases
-    #    ~/.oh-my-zsh: oh-my-zsh
+    ~/.byobu: byobu
 
 - shell:
   - [sudo chsh -s $(which zsh), Making zsh the default shell]
