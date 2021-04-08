@@ -5,6 +5,9 @@
 
 - clean: ['~']
 
+- shell:
+  - rm -rf ~/.oh-my-zsh && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 - link:
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
@@ -12,11 +15,10 @@
     ~/.ssh/authorized_keys: ssh/authorized_keys
     ~/.p10k.zsh: p10k.zsh
     ~/.aliases: aliases
-    ~/.oh-my-zsh: oh-my-zsh
-
-- create:
+    #    ~/.oh-my-zsh: oh-my-zsh
 
 - shell:
-  - [chsh -s $(which zsh), Making zsh the default shell]
+  - [sudo chsh -s $(which zsh), Making zsh the default shell]
   - vim +'PlugInstall --sync' +qa
   - git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+  - source ~/.zshrc
