@@ -1,0 +1,21 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.ssh/authorized_keys: ssh/authorized_keys
+    ~/.p10k.zsh: p10k.zsh
+    ~/.aliases: aliases
+    ~/.oh-my-zsh: oh-my-zsh
+
+- create:
+
+- shell:
+  - [chsh -s $(which zsh), Making zsh the default shell]
+  - vim +'PlugInstall --sync' +qa
+  - git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
