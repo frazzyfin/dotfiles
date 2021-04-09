@@ -52,6 +52,8 @@ unsetopt correct_all
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias fd=fdfind
 alias lzd=lazydocker
+alias tmux="TERM=screen-256olor-bce tmux"
+
 
 source $HOME/.aliases
 
