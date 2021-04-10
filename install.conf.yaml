@@ -9,7 +9,8 @@
   - rm -rf ~/.oh-my-zsh && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 - link:
-    ~/.tmux.conf: tmux.conf
+    ~/.tmux.conf: .tmux/.tmux.conf
+    ~/.tmux.conf.local: tmux.conf.local
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.ssh/authorized_keys: ssh/authorized_keys

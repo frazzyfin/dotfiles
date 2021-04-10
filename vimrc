@@ -30,6 +30,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'  " bottom status bar
+Plug 'justinmk/vim-sneak'
 
 call plug#end()
 
