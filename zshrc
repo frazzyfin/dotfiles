@@ -60,7 +60,7 @@ source $HOME/.aliases
 
 # load the fzf config
 #export FZF_DEFAULT_COMMAND='fd --type f --hidden --no-ignore'
-export FZF_DEFAULT_OPTS='--height 40% --preview "bat -f --style header,numbers {}" --preview-window=:hidden'
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse  --info=inline --border=rounded --preview "bat -f --style header,numbers {}" --preview-window=:hidden'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
