@@ -18,14 +18,23 @@ set smartindent
 set nowrap
 set smartcase
 set incsearch
-set termguicolors
 set scrolloff=8
 set noshowmode
+
+" ===================================================================
+" For some reason 24-bit 'true-color' support isn't enabling properly
+" Here's a workaround for versions that support termguicolors
+if exists ('+termguicolors')
+	set termguicolors     " enable true colors support
+	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
 
 call plug#begin()
 
 Plug 'gruvbox-community/gruvbox'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'

@@ -60,10 +60,24 @@ source $HOME/.aliases
 
 # load the fzf config
 #export FZF_DEFAULT_COMMAND='fd --type f --hidden --no-ignore'
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse  --info=inline --border=rounded --preview "bat -f --style header,numbers {}" --preview-window=:hidden'
+export FZF_DEFAULT_OPTS="--height 40% --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+[ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
+
+# source devtoolset-7 for centos
+source /opt/rh/devtoolset-7/enable
+
+#add to path
+typeset -U path # force unique values
+# Append to path
+# #path+=${HOME}/bin
+# #path+=${HOME}/.cargo/bin
+# # Prepend to path 
+[ -e ${HOME}/bin ] && path[1,0]=${HOME}/bin
+[ -e ${HOME}/.cargo/bin ] && path[1,0]=${HOME}/.cargo/bin
+[ -e ${HOME}/.local/bin ] && path[1,0]=${HOME}/.local/bin
 
