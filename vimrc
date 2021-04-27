@@ -11,15 +11,17 @@ let mapleader = " "
 
 set number
 set relativenumber
-set nohlsearch
 set hidden
 set noerrorbells
-set smartindent
+set autoindent
 set nowrap
 set smartcase
 set incsearch
+set hlsearch
 set scrolloff=8
 set noshowmode
+
+filetype plugin indent on
 
 " ===================================================================
 " For some reason 24-bit 'true-color' support isn't enabling properly
@@ -43,8 +45,10 @@ Plug 'justinmk/vim-sneak'
 
 call plug#end()
 
-set background=dark             " Setting dark mode
+set background=dark
+let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
+
 
 " Find file (vscode shortcut)
 nnoremap <C-p> :Files<CR>
