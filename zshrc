@@ -36,7 +36,6 @@ fi
 plugins=(git zsh-autosuggestions ripgrep z tmux)
 
 # Env variables for oh-my-zsh plugins need to go here before they are sourced
-export ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
 
