@@ -42,6 +42,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'  " bottom status bar
 Plug 'justinmk/vim-sneak'
+Plug 'unblevable/quick-scope'
 
 call plug#end()
 
