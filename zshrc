@@ -67,9 +67,6 @@ export FZF_DEFAULT_OPTS="--height 40% --preview '([[ -f {} ]] && (bat --style=nu
 
 [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
 
-# source devtoolset-7 for centos
-source /opt/rh/devtoolset-7/enable
-
 #add to path
 typeset -U path # force unique values
 # Append to path

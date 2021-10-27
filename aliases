@@ -14,7 +14,7 @@ alias suspend='sudo pm-suspend'
 
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rm='rm -i'
+alias rm='rm --one-file-system -I'
 alias la='ls -alh'
 
 # +----+
