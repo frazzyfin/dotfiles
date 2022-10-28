@@ -33,7 +33,7 @@ if [ ! -d "$HOME/.oh-my-zsh/custom/themes/powerlevel10k" ]; then
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 fi
 
-plugins=(git zsh-autosuggestions ripgrep z tmux zmv)
+plugins=(git zsh-autosuggestions ripgrep z tmux)
 
 # Env variables for oh-my-zsh plugins need to go here before they are sourced
 
