@@ -14,7 +14,8 @@
     ~/.tmux.conf.local: tmux.conf.local
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
-    ~/.ssh/authorized_keys: ssh/authorized_keys
+    ~/.ssh/authorized_keys: .ssh/authorized_keys
+    ~/.ssh/config: ssh/config
     ~/.p10k.zsh: p10k.zsh
     ~/.aliases: aliases
 
