@@ -7,6 +7,9 @@ export ZSH="/home/$USER/.oh-my-zsh"
 # Default editor
 export EDITOR="/usr/bin/vim"
 
+ZELLIJ_AUTO_ATTACH=true
+ZELLIJ_AUTO_EXIT=true
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -33,7 +36,7 @@ if [ ! -d "$HOME/.oh-my-zsh/custom/themes/powerlevel10k" ]; then
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 fi
 
-plugins=(git zsh-autosuggestions ripgrep z tmux zmv)
+plugins=(git zsh-autosuggestions ripgrep z docker-compose)
 
 # Env variables for oh-my-zsh plugins need to go here before they are sourced
 
@@ -57,6 +60,13 @@ alias tmux='TERM=xterm-256color tmux'
 
 source $HOME/.aliases
 
+autoload zmv
+
+#Vim bash mode
+bindkey -v
+#Delay between ESC and mode change
+export KEYTIMEOUT=1
+
 # load the fzf config
 #export FZF_DEFAULT_COMMAND='fd --type f --hidden --no-ignore'
 export FZF_DEFAULT_OPTS="--height 40% --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
@@ -77,3 +87,4 @@ typeset -U path # force unique values
 [ -e ${HOME}/.cargo/bin ] && path[1,0]=${HOME}/.cargo/bin
 [ -e ${HOME}/.local/bin ] && path[1,0]=${HOME}/.local/bin
 
+eval "$(zellij setup --generate-auto-start zsh)"

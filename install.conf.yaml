@@ -17,7 +17,7 @@
     ~/.ssh/authorized_keys: ssh/authorized_keys
     ~/.p10k.zsh: p10k.zsh
     ~/.aliases: aliases
+    ~/.config/nvim: config/nvim
 
 - shell:
-  - vim +'PlugInstall --sync' +qa
   - git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
