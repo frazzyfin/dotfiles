@@ -1,0 +1,15 @@
+Host ha
+    HostName 10.0.20.15
+    User frazzyfin
+
+Host nas
+    HostName 10.0.20.64
+    User root
+
+Host proxmox
+    HostName 10.0.20.123
+    User root
+
+Host udmp
+    HostName 10.0.10.1
+    User root
