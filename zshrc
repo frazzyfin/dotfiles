@@ -87,4 +87,12 @@ typeset -U path # force unique values
 [ -e ${HOME}/.cargo/bin ] && path[1,0]=${HOME}/.cargo/bin
 [ -e ${HOME}/.local/bin ] && path[1,0]=${HOME}/.local/bin
 
-eval "$(zellij setup --generate-auto-start zsh)"
+# Running on windows WSL or not
+if grep -qi microsoft /proc/version; then
+  echo "Running on WSL"
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+else
+  eval "$(zellij setup --generate-auto-start zsh)"
+fi
