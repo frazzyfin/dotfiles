@@ -9,6 +9,9 @@
   - rm -rf ~/.oh-my-zsh && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   - git submodule update --init --recursive
 
+- create:
+  - ~/.config
+
 - link:
     ~/.tmux.conf: .tmux/.tmux.conf
     ~/.tmux.conf.local: tmux.conf.local
