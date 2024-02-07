@@ -55,10 +55,10 @@ alias svim='sudoedit'
 # | Docker Compose |
 # +----------------+
 
-alias dcup='docker-compose -f /opt/docker-compose.yml up -d' #brings up all containers if one is not defined after dcup
+alias dcup='docker-compose -f /opt/docker-compose.yml up -d'  #brings up all containers if one is not defined after dcup
 alias dcdown='docker-compose -f /opt/docker-compose.yml stop' #brings down all containers if one is not defined after dcdown
 alias dcpull='docker-compose -f /opt/docker-compose.yml pull' #pulls all new images is specified after dcpull
-alias dclogs='docker-compose -f /opt/docker-compose.yml logs -tf --tail="50" '  
+alias dclogs='docker-compose -f /opt/docker-compose.yml logs -tf --tail="50" '
 alias dtail='docker logs -tf --tail="50" "$@"'
 
 # +-----+
@@ -71,7 +71,7 @@ alias gp='git push'
 alias gpo='git push origin'
 alias gtd='git tag --delete'
 alias gtdr='git tag --delete origin'
-alias gr='git branch -r'                                                                           # display remote branch
+alias gr='git branch -r' # display remote branch
 alias gplo='git pull origin'
 alias gb='git branch '
 alias gc='git commit'
@@ -82,12 +82,17 @@ alias gr='git remote'
 alias grs='git remote show'
 alias glo='git log --pretty="oneline"'
 alias glol='git log --graph --oneline --decorate'
-alias gclean="git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d" # Delete local branch merged with master
-alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"                                                              # git log for each branches
-alias gsub="git submodule update --remote"                                                        # pull submodules
+alias gclean="git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"                                                                                                                                                                              # Delete local branch merged with master
+alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'" # git log for each branches
+alias gsub="git submodule update --remote"                                                                                                                                                                                                                                     # pull submodules
 
 # +-----+
 # | Vim |
 # +-----+
 
 alias nvim='~/nvim.appimage'
+
+# +----------------+
+# | Github Copilot |
+# +----------------+
+alias ghcs='gh copilot suggest -t shell'
